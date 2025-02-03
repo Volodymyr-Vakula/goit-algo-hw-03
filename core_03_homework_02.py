@@ -13,7 +13,7 @@ def get_numbers_ticket(min_value: int, max_value: int, quantity: int) -> list:
     Output:
     :return: list
     """
-    if min_value < 1 or max_value > 1000 or not min_value <= quantity <= max_value:
+    if min_value < 1 or max_value > 1000 or not 0 < quantity <= max_value - min_value + 1:
         return []
     set_of_numbers = set()
     while len(set_of_numbers) < quantity:
